@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function create_block_wp_idg_ufr_block_simple-card_block_init() {
+function create_block_wp_idg_ufr_block_simple_card_block_init() {
 	register_block_type( __DIR__ );
 }
 add_action( 'init', 'create_block_wp_idg_ufr_block_simple-card_block_init' );
