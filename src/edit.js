@@ -46,8 +46,8 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 				<div className="row align-items-center">
 					<div className="col config">
 						<UFRBlockHeader
-							title="Cartão Simples"
-							description="Configure a aparenência do Cartão Simples abaixo. Outras configurações podem estar disponíveis no menu á direita."
+							title="Grupo de Cartões"
+							description="Configure a aparenência do Grupo de Cartões abaixo. Outras configurações podem estar disponíveis no menu á direita."
 						/>
 					</div>
 
@@ -80,7 +80,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 				<div id="ufrControls">
 					<fieldset>
 						<UFRSelect
-							label="Posição Horizontal do Cartão Simples"
+							label="Posição Horizontal do Grupo de Cartões"
 							options={positioningOptions}
 							value={position}
 							attr="position"

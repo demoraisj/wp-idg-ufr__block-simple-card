@@ -1,15 +1,15 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/ufr-simple-card",
+	"name": "create-block/ufr-card-group",
 	"version": "0.1.0",
-	"title": "UFR - Cartão Simples",
+	"title": "UFR - Grupo de Cartões",
 	"category": "widgets",
-	"icon": "simple-card",
+	"icon": "screenoptions",
 	"description": "Componente do DSGOV para o tema WP da Universidade Federal de Rondonópolis.",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "wp-idg-ufr__block-simple-card",
+	"textdomain": "wp-idg-ufr__block-card-group",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css",
