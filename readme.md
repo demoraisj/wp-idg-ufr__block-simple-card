@@ -1,10 +1,10 @@
 # wp-idg-ufr__block-avatar
 
-> Bloco de Grupo de Cartões baseado no componente do Design System do Governo Federal <br />
-> @see https://dsgov.estaleiro.serpro.gov.br/components/card-group
+> Bloco de Cartão Simples baseado no componente do Design System do Governo Federal <br />
+> @see https://dsgov.estaleiro.serpro.gov.br/components/simple-card
 
 ```
-=== card-group ===
+=== simple-card ===
 Tags:              block
 Tested up to:      5.8.0
 Stable tag:        0.1.0

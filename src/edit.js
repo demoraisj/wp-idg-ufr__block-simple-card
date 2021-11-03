@@ -1,5 +1,5 @@
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { UFRBlockHeader, UFRSelect } from 'wp-idg-ufr__block-components';
+import { UFRBlockHeader, UFRSelect, UFRInput, UFRTextarea, UFRIconPicker } from 'wp-idg-ufr__block-components';
 import { Fragment } from 'react';
 import Render from "./render";
 import './editor.scss';
@@ -16,7 +16,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 	/**
 	 * Desestruturação dos atributos do bloco registrados em block.json -> "attributes"
 	 */
-	const { position } = attributes;
+	const { position, title, description } = attributes;
 
 	/**
 	 * Opções para configuração de posição do botão
@@ -46,13 +46,29 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 				<div className="row align-items-center">
 					<div className="col config">
 						<UFRBlockHeader
-							title="Grupo de Cartões"
-							description="Configure a aparenência do Grupo de Cartões abaixo. Outras configurações podem estar disponíveis no menu á direita."
+							title="Cartão Simples"
+							description="Configure a aparenência do Cartão Simples abaixo. Outras configurações podem estar disponíveis no menu á direita."
 						/>
+
+						<UFRInput
+							label="Título"
+							value={title}
+							attr="title"
+							setter={setAttributes}
+						/>
+
+						<UFRTextarea
+							label="Descrição"
+							value={description}
+							attr="description"
+							setter={setAttributes}
+						/>
+
+						<UFRIconPicker setter={setAttributes} />
 					</div>
 
 					<div className="row preview">
-						<Render attributes={attributes} preview={true} />
+						<Render attributes={attributes} />
 					</div>
 				</div>
 			</div>
@@ -80,7 +96,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 				<div id="ufrControls">
 					<fieldset>
 						<UFRSelect
-							label="Posição Horizontal do Grupo de Cartões"
+							label="Posição Horizontal do Cartão Simples"
 							options={positioningOptions}
 							value={position}
 							attr="position"

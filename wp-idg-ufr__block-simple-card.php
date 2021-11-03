@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Blocos WP-IDG-UFR - Grupo de Cartões
+ * Plugin Name:       Blocos WP-IDG-UFR - Cartão Simples
  * Description:       Componente do DSGOV para o tema WP da Universidade Federal de Rondonópolis.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -8,7 +8,7 @@
  * Author:            UFR
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       wp-idg-ufr__block-card-group
+ * Text Domain:       wp-idg-ufr__block-simple-card
  *
  * @package           create-block
  */
