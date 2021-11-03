@@ -19,8 +19,12 @@ export default function Render({ attributes }) {
 	}
 
 	return (
-		<div className={`item d-flex align-items-center justify-content-center text-center ${hoverBehavior}`}>
-			<a className="content" href={href} target={target} style={{ cursor: href ? 'pointer' : 'default' }}>
+		<a
+			className={`item d-flex align-items-center justify-content-center text-center ${hoverBehavior}`}
+			href={href}
+			target={target}
+		>
+			<div className="content">
 				<div className="front">
 					<i className={`${icon} fa-3x`} />
 					<h2>{title}</h2>
@@ -28,7 +32,7 @@ export default function Render({ attributes }) {
 				<span className="description">
 					{description}
 				</span>
-			</a>
-		</div>
+			</div>
+		</a>
 	)
 }

@@ -18,11 +18,9 @@ $primary-lighter: #2670E8;
 		overflow: hidden;
 		overflow-wrap: anywhere;
 		padding: 5px;
+		text-decoration: none;
 
 		.content {
-			text-decoration: none;
-			color: #fff;
-
 			i {
 				color: $primary-lighter;
 			}
