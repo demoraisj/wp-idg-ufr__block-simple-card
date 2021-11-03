@@ -25,11 +25,19 @@
         },
 		"description": {
             "type": "string",
-            "default": "Descrição"
+            "default": "Descrição\nde varias\nlinhas"
         },
 		"icon": {
             "type": "string",
             "default": "fas fa-star"
+        },
+		"link": {
+            "type": "string",
+            "default": ""
+        },
+		"target": {
+            "type": "boolean",
+            "default": false
         }
 	}
 }

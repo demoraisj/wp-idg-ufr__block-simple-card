@@ -1,5 +1,5 @@
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { UFRBlockHeader, UFRSelect, UFRInput, UFRTextarea, UFRIconPicker } from 'wp-idg-ufr__block-components';
+import { UFRBlockHeader, UFRSelect, UFRInput, UFRTextarea, UFRIconPicker, UFRCheckbox } from 'wp-idg-ufr__block-components';
 import { Fragment } from 'react';
 import Render from "./render";
 import './editor.scss';
@@ -16,7 +16,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 	/**
 	 * Desestruturação dos atributos do bloco registrados em block.json -> "attributes"
 	 */
-	const { position, title, description, icon } = attributes;
+	const { position, title, description, icon, link, target } = attributes;
 
 	/**
 	 * Opções para configuração de posição do botão
@@ -57,11 +57,27 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 							setter={setAttributes}
 						/>
 
+						<UFRInput
+							label="Link para navegar ao clicar (opcional)"
+							value={link}
+							attr="link"
+							setter={setAttributes}
+						/>
+
 						<UFRTextarea
 							label="Descrição"
 							value={description}
 							attr="description"
 							setter={setAttributes}
+						/>
+
+						<UFRCheckbox
+							label="Abrir link em uma nova aba?"
+							checked={target}
+							valWhenChecked="target"
+							valWhenUnchecked="_self"
+							attr="blank"
+							setter={ setAttributes }
 						/>
 
 						<UFRIconPicker setter={setAttributes} value={icon} />

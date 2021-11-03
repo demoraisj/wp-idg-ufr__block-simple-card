@@ -6,13 +6,21 @@
  * @return {JSX.Element} Renderização do bloco
  */
 export default function Render({ attributes }) {
-	const { title, description, icon } = attributes;
+	const { title, description, icon, link, target } = attributes;
 
 	const hoverBehavior = description.trim().length > 0 ? 'hover' : '';
+	let href = null;
+
+	if (typeof link === 'string' && link.length > 0) {
+		href = link.toLowerCase().trim();
+		href = href.startsWith('http')
+			? href
+			: `//${href}`;
+	}
 
 	return (
 		<div className={`item d-flex align-items-center justify-content-center text-center ${hoverBehavior}`}>
-			<div className="content">
+			<a className="content" href={href} target={target} style={{ cursor: href ? 'pointer' : 'default' }}>
 				<div className="front">
 					<i className={`${icon} fa-3x`} />
 					<h2>{title}</h2>
@@ -20,7 +28,7 @@ export default function Render({ attributes }) {
 				<span className="description">
 					{description}
 				</span>
-			</div>
+			</a>
 		</div>
 	)
 }
