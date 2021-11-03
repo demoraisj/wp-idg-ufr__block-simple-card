@@ -16,7 +16,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 	/**
 	 * Desestruturação dos atributos do bloco registrados em block.json -> "attributes"
 	 */
-	const { position, title, description } = attributes;
+	const { position, title, description, icon } = attributes;
 
 	/**
 	 * Opções para configuração de posição do botão
@@ -64,7 +64,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 							setter={setAttributes}
 						/>
 
-						<UFRIconPicker setter={setAttributes} />
+						<UFRIconPicker setter={setAttributes} value={icon} />
 					</div>
 
 					<div className="row preview">
