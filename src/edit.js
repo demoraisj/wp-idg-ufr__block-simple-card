@@ -74,9 +74,9 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 						<UFRCheckbox
 							label="Abrir link em uma nova aba?"
 							checked={target}
-							valWhenChecked="target"
+							valWhenChecked="_blank"
 							valWhenUnchecked="_self"
-							attr="blank"
+							attr="target"
 							setter={ setAttributes }
 						/>
 
